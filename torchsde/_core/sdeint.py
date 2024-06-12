@@ -116,7 +116,7 @@ def check_contract(sde, y0, ts, bm, method, adaptive, options, names, logqp):
     if names is None:
         names_to_change = {}
     else:
-        names_to_change = {key: names[key] for key in ("drift", "diffusion", "prior_drift", "drift_and_diffusion",
+        names_to_change = {key: names[key] for key in ("drift", "draft", "diffusion", "prior_drift", "drift_and_diffusion",
                                                        "drift_and_diffusion_prod") if key in names}
     if len(names_to_change) > 0:
         sde = base_sde.RenameMethodsSDE(sde, **names_to_change)

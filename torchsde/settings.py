@@ -36,6 +36,7 @@ class METHODS(metaclass=ContainerMeta):
     heun = 'heun'
     log_ode_midpoint = 'log_ode'
     euler_heun = 'euler_heun'
+    euler_script = 'euler_script'
 
 
 class NOISE_TYPES(metaclass=ContainerMeta):  # noqa

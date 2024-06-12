@@ -14,6 +14,7 @@
 
 from .euler import Euler
 from .euler_heun import EulerHeun
+from .euler_draft import EulerDraft
 from .heun import Heun
 from .log_ode import LogODEMidpoint
 from .midpoint import Midpoint
@@ -44,5 +45,7 @@ def select(method, sde_type):
         return LogODEMidpoint
     elif method == METHODS.euler_heun:
         return EulerHeun
+    elif method == METHODS.euler_draft:
+        return EulerDraft
     else:
         raise ValueError(f"Method '{method}' does not match any known method.")
